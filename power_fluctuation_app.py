@@ -104,4 +104,4 @@ else:
 
 # --- Footer (Optional) ---
 st.markdown("---")
-st.markdown("<div style='text-align:center; font-size:13px; color:gray;'>© 2025 | Built using Python, Streamlit | Intel AI Digital Readiness Project</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align:center; font-size:13px; color:gray;'>© 2025 | Built by Madhav Raval using Python, Streamlit | Intel AI Digital Readiness Project</div>", unsafe_allow_html=True)
