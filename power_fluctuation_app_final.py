@@ -53,11 +53,12 @@ st.markdown("""
 
 # Developer credits
 st.markdown("---")
-st.markdown("**Developed by:** Madhav Raval  
-"
-            "**Program:** Intel® AI Digital Readiness  
-"
-            "**Department:** Electrical Engineering, L.D. College of Engineering")
+st.markdown("""
+**Developed by:** Madhav Raval  <br>
+**Program:** Intel® AI Digital Readiness  <br>
+**Department:** Electrical Engineering, L.D. College of Engineering
+""", unsafe_allow_html=True)
+
 
 # Process file if uploaded
 if uploaded_file is not None:
