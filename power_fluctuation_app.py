@@ -56,6 +56,11 @@ if uploaded_file:
 else:
     st.info("🔍 No file uploaded. Showing sample data...")
     data = load_sample_data()
+st.markdown("""
+**Developed by:** Madhav Raval  <br>
+**Program:** Intel® AI Digital Readiness  <br>
+**Department:** Electrical Engineering, L.D. College of Engineering
+""", unsafe_allow_html=True)
 
 # --- Show Dataset ---
 st.subheader("📊 Data Preview")
