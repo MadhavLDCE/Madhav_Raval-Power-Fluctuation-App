@@ -54,7 +54,7 @@ if uploaded_file is not None:
 
         # Voltage
         fig1, ax1 = plt.subplots(figsize=(10, 3))
-        ax1.plot(df['Timestamp'], df['Voltage'], color='green')
+        ax1.plot(df['Timestamp'], df['Voltage'], color='#00FF6A')  # neon green
         fig1.patch.set_facecolor('#0e1117')
         ax1.set_facecolor('#0e1117')
         ax1.tick_params(colors='white')
@@ -69,7 +69,7 @@ if uploaded_file is not None:
 
         # Current
         fig2, ax2 = plt.subplots(figsize=(10, 3))
-        ax2.plot(df['Timestamp'], df['Current'], color='blue')
+        ax2.plot(df['Timestamp'], df['Current'], color='#1E90FF')  # vivid blue
         fig2.patch.set_facecolor('#0e1117')
         ax2.set_facecolor('#0e1117')
         ax2.tick_params(colors='white')
@@ -84,7 +84,7 @@ if uploaded_file is not None:
 
         # Frequency
         fig3, ax3 = plt.subplots(figsize=(10, 3))
-        ax3.plot(df['Timestamp'], df['Frequency'], color='orange')
+        ax3.plot(df['Timestamp'], df['Frequency'], color='#BB00FF')  # electric purple
         fig3.patch.set_facecolor('#0e1117')
         ax3.set_facecolor('#0e1117')
         ax3.tick_params(colors='white')
