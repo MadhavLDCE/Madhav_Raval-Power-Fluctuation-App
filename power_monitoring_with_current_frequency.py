@@ -18,10 +18,13 @@ st.markdown(
 st.sidebar.title("📁 Upload Your CSV")
 uploaded_file = st.sidebar.file_uploader("Upload CSV", type=["csv"])
 st.sidebar.markdown("**Columns Required:**")
-st.sidebar.markdown("- Timestamp
-- Voltage
-- Current
-- Frequency")
+st.sidebar.markdown("""
+- Timestamp  
+- Voltage  
+- Current  
+- Frequency
+""")
+
 
 # About section
 st.markdown("---")
