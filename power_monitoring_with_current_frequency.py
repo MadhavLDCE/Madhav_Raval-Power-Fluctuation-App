@@ -40,7 +40,7 @@ if uploaded_file is not None:
 
         st.subheader("📈 Power Metrics Over Time")
 
-    # Fluctuation Alert FIRST
+# Fluctuation Alert FIRST
 st.subheader("⚠️ Voltage Fluctuation Alert")
 critical_rows = df[(df['Voltage'] < 215) | (df['Voltage'] > 245)]
 
