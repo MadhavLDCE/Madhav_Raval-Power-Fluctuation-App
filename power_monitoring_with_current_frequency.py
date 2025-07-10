@@ -107,7 +107,7 @@ else:
 st.markdown("---")
 st.markdown(
     "<p style='text-align: center; color: gray; font-size: 14px;'>"
-    "© 2025 Madhav Raval • All Rights Reserved • Intel AI Digital Readiness"
+    "© 2025 MADHAV RAVAL • All Rights Reserved"
     "</p>",
     unsafe_allow_html=True
 )
