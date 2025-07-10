@@ -40,42 +40,69 @@ if uploaded_file is not None:
 
         st.subheader("📈 Power Metrics Over Time")
 
+    # Fluctuation Alert FIRST
+st.subheader("⚠️ Voltage Fluctuation Alert")
+critical_rows = df[(df['Voltage'] < 215) | (df['Voltage'] > 245)]
+
+if not critical_rows.empty:
+    st.error(f"⚠️ Voltage fluctuation detected! {len(critical_rows)} unstable readings found.")
+    st.markdown("**Unstable Timestamps:**")
+    st.dataframe(critical_rows[['Timestamp', 'Voltage']])
+else:
+    st.success("✅ All voltage values are within the stable range (215V–245V).")
+
+# Then the graphs
+st.subheader("📈 Power Metrics Over Time")
+
+
         # Voltage
-        fig1, ax1 = plt.subplots(figsize=(10, 3))
-        ax1.plot(df['Timestamp'], df['Voltage'], color='green')
-        ax1.set_title("Voltage Over Time")
-        ax1.set_xlabel("Timestamp")
-        ax1.set_ylabel("Voltage (V)")
-        plt.xticks(rotation=45)
-        st.pyplot(fig1)
+       fig1, ax1 = plt.subplots(figsize=(10, 3))
+       ax1.plot(df['Timestamp'], df['Voltage'], color='green')
+
+       fig1.patch.set_facecolor('#0e1117')
+       ax1.set_facecolor('#0e1117')
+       ax1.tick_params(colors='white')
+       ax1.xaxis.label.set_color('white')
+       ax1.yaxis.label.set_color('white')
+       ax1.title.set_color('white')
+
+       ax1.set_title("Voltage Over Time")
+       ax1.set_xlabel("Timestamp")
+       ax1.set_ylabel("Voltage (V)")
+       plt.xticks(rotation=45)
+       st.pyplot(fig1)
 
         # Current
-        fig2, ax2 = plt.subplots(figsize=(10, 3))
-        ax2.plot(df['Timestamp'], df['Current'], color='blue')
-        ax2.set_title("Current Over Time")
-        ax2.set_xlabel("Timestamp")
-        ax2.set_ylabel("Current (A)")
-        plt.xticks(rotation=45)
-        st.pyplot(fig2)
+       fig2, ax2 = plt.subplots(figsize=(10, 3))
+       ax2.plot(df['Timestamp'], df['Current'], color='blue')
+
+      fig2.patch.set_facecolor('#0e1117')
+      ax2.set_facecolor('#0e1117')
+      ax2.tick_params(colors='white')
+      ax2.xaxis.label.set_color('white')
+      ax2.yaxis.label.set_color('white')
+      ax2.title.set_color('white')
+
+      ax2.set_title("Current Over Time")
+      ax2.set_xlabel("Timestamp")
+      ax2.set_ylabel("Current (A)")
+      plt.xticks(rotation=45)
+      st.pyplot(fig2)
+
 
         # Frequency
-        fig3, ax3 = plt.subplots(figsize=(10, 3))
-        ax3.plot(df['Timestamp'], df['Frequency'], color='orange')
-        ax3.set_title("Frequency Over Time")
-        ax3.set_xlabel("Timestamp")
-        ax3.set_ylabel("Frequency (Hz)")
-        plt.xticks(rotation=45)
-        st.pyplot(fig3)
+      fig3, ax3 = plt.subplots(figsize=(10, 3))
+      ax3.plot(df['Timestamp'], df['Frequency'], color='orange')
 
-        # Basic Fluctuation Alert
-        st.subheader("⚠️ Voltage Fluctuation Alert")
-        avg_voltage = df['Voltage'].mean()
-        if avg_voltage < 215 or avg_voltage > 245:
-            st.error(f"Voltage average = {avg_voltage:.2f}V — Abnormal! Please take caution.")
-        else:
-            st.success(f"Voltage average = {avg_voltage:.2f}V — Stable.")
+      fig3.patch.set_facecolor('#0e1117')
+      ax3.set_facecolor('#0e1117')
+      ax3.tick_params(colors='white')
+      ax3.xaxis.label.set_color('white')
+      ax3.yaxis.label.set_color('white')
+      ax3.title.set_color('white')
 
-    except Exception as e:
-        st.error(f"Error reading file: {e}")
-else:
-    st.info("Please upload a CSV file to visualize power metrics.")
+      ax3.set_title("Frequency Over Time")
+      ax3.set_xlabel("Timestamp")
+      ax3.set_ylabel("Frequency (Hz)")
+      plt.xticks(rotation=45)
+      st.pyplot(fig3)
