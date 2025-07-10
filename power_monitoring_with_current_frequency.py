@@ -28,7 +28,7 @@ st.sidebar.markdown("""
 
 # About section
 st.markdown("---")
-st.markdown("**Developed by:** Madhav Raval  <br>"
+st.markdown("**Developed by:** MADHAV RAVAL  <br>"
             "**Program:** Intel® AI Digital Readiness  <br>"
             "**Department:** Electrical Engineering, L.D. College of Engineering",
             unsafe_allow_html=True)
