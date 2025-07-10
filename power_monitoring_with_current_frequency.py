@@ -101,3 +101,14 @@ if uploaded_file is not None:
         st.error(f"Error reading file: {e}")
 else:
     st.info("Please upload a CSV file to visualize power metrics.")
+
+
+# 👇 Footer goes below this
+st.markdown("---")
+st.markdown(
+    "<p style='text-align: center; color: gray; font-size: 14px;'>"
+    "© 2025 Madhav Raval • All Rights Reserved • Intel AI Digital Readiness"
+    "</p>",
+    unsafe_allow_html=True
+)
+
