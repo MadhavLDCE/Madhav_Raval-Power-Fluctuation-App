@@ -28,10 +28,23 @@ st.sidebar.markdown("""
 
 # About section
 st.markdown("---")
-st.markdown("**Developed by:** MADHAV RAVAL  <br>"
-            "**Program:** Intel® AI Digital Readiness  <br>"
-            "**Department:** Electrical Engineering, L.D. College of Engineering",
+st.markdown("**Developed by:** MADHAV RAVAL  <br>",
             unsafe_allow_html=True)
+
+st.markdown("About the Project")
+st.write("""
+This web application is designed to predict **power fluctuations in rural industry clusters** using a trained machine learning model.
+
+It enables users to:
+- Upload or enter power-related data (voltage, current, load)
+- Predict voltage fluctuations
+- Visualize the results and receive alert messages if instability is detected
+
+**Objective:** To provide an early warning tool for rural industries facing unpredictable power supply, helping them minimize downtime and equipment damage.
+
+This project was developed as part of an AI-based innovation initiative focused on sustainable and inclusive technology solutions.
+""")
+
 
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
