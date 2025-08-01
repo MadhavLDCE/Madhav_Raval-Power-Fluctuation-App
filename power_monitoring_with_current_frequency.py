@@ -46,7 +46,7 @@ st.markdown("""
 </style>
 
 <div class="about-box">
-<h4>🔌 About the Project</h4>
+<h4> About the Project</h4>
 <p>This web application predicts <strong>power fluctuations in rural industry clusters</strong> using a trained machine learning model.</p>
 
 <ul>
