@@ -25,25 +25,28 @@ st.sidebar.markdown("""
 - Frequency
 """)
 
-
 # About section
 st.markdown("---")
 st.markdown("**Developed by:** MADHAV RAVAL  <br>",
             unsafe_allow_html=True)
 
-# About section inside a bordered box
 st.markdown("""
 <style>
 .about-box {
-    border: 2px solid #4CAF50;
+    border: 2px solid #00FFAA;  /* Neon green/cyan border */
     padding: 15px;
     border-radius: 10px;
-    background-color: #f9fdf9;
+    background-color: #1e1e1e;  /* Dark gray background */
+    color: #f0f0f0;             /* Light text */
+    font-size: 16px;
+}
+.about-box h4 {
+    color: #00FFAA;
 }
 </style>
 
 <div class="about-box">
-<h4> About the Project</h4>
+<h4>🔌 About the Project</h4>
 <p>This web application predicts <strong>power fluctuations in rural industry clusters</strong> using a trained machine learning model.</p>
 
 <ul>
@@ -57,6 +60,7 @@ st.markdown("""
 <p>This solution supports sustainable energy practices.</p>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
