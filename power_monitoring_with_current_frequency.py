@@ -31,19 +31,33 @@ st.markdown("---")
 st.markdown("**Developed by:** MADHAV RAVAL  <br>",
             unsafe_allow_html=True)
 
-st.markdown("About the Project")
-st.write("""
-This web application is designed to predict **power fluctuations in rural industry clusters** using a trained machine learning model.
+# About section inside a bordered box
+st.markdown("""
+<style>
+.about-box {
+    border: 2px solid #4CAF50;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f9fdf9;
+}
+</style>
 
-It enables users to:
-- Upload or enter power-related data (voltage, current, load)
-- Predict voltage fluctuations
-- Visualize the results and receive alert messages if instability is detected
+<div class="about-box">
+<h4> About the Project</h4>
+<p>This web application predicts <strong>power fluctuations in rural industry clusters</strong> using a trained machine learning model.</p>
 
-**Objective:** To provide an early warning tool for rural industries facing unpredictable power supply, helping them minimize downtime and equipment damage.
+<ul>
+<li><strong>Upload</strong> voltage/current/load data</li>
+<li><strong>Predict</strong> future voltage behavior</li>
+<li><strong>Visualize</strong> results and receive alerts</li>
+</ul>
 
-This project was developed as part of an AI-based innovation initiative focused on sustainable and inclusive technology solutions.
-""")
+<p><strong>Objective:</strong> To provide an early warning tool for rural industries to reduce equipment damage and power-related losses.</p>
+
+<p>This solution supports sustainable energy practices.</p>
+</div>
+""", unsafe_allow_html=True)
+
 
 
 if uploaded_file is not None:
